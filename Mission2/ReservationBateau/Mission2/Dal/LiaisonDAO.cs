@@ -30,7 +30,7 @@ namespace Connecte.DAL
 
         // Mise à jour d'une liaison
 
-        public static void updateLiaison(Liaison l)
+        public static void updateLiaison(Liaison l, string id, string name)
         {
 
             try
@@ -43,7 +43,7 @@ namespace Connecte.DAL
                 maConnexionSql.openConnection();
 
 
-                Ocom = maConnexionSql.reqExec("update liaison set IdRegrouper = '" + l.IdRegrouper + " IdDepart = '"+l.IdDepart+ " IdArrivee = '" + l.IdArrivee+ " Duree = '" + l.Duree+  "'where id = " + l.Id);
+                Ocom = maConnexionSql.reqExec(" update liaison   set duree=" + l.Duree + " where ID_REGROUPER=" + id + " and  ID_ARRIVEE=" + l.IdArrivee);
 
 
                 int i = Ocom.ExecuteNonQuery();
@@ -64,8 +64,41 @@ namespace Connecte.DAL
 
 
         }
+        public static void deleteLiaison(Liaison l, string id, string name)
+        {
 
-        // Récupération de la liste des employés
+            try
+            {
+
+
+                maConnexionSql = ConnexionSql.getInstance(provider, dataBase, uid, mdp);
+
+
+                maConnexionSql.openConnection();
+
+
+                Ocom = maConnexionSql.reqExec(" delete from liaison  where ID_REGROUPER=" + id + " and  ID_ARRIVEE=" + l.IdArrivee);
+
+
+                int i = Ocom.ExecuteNonQuery();
+
+
+
+                maConnexionSql.closeConnection();
+
+
+
+            }
+
+            catch (Exception emp)
+            {
+
+                throw (emp);
+            }
+
+
+        }
+        // Récupération de la liste des liaisons
         public static List<Liaison> GetLiaison(string id, string name)
         {
 
@@ -93,18 +126,18 @@ namespace Connecte.DAL
                 while (reader.Read())
                 {
 
-                    string numero = (string)reader.GetValue(0);
-                    string  nom = (string)reader.GetValue(1);
-                    string depart = (string)reader.GetValue(2);
-                    string arrivee = (string)reader.GetValue(3);
-                    string duree = (string)reader.GetValue(4);
+                    string depart = (string)reader.GetValue(0);
+                    string  arrivee = (string)reader.GetValue(1);
+                    string duree = (string)reader.GetValue(3);
+                    string arrive = (string)reader.GetValue(2);
+                    
 
 
 
-                    //Instanciation d'un Emplye
-                    l = new Liaison(numero, nom, depart,arrivee,duree);
+                    //Instanciation d'une liaison
+                    l = new Liaison(depart, arrivee ,duree, arrive);
 
-                    // Ajout de cet employe à la liste 
+                    // Ajout de cet liaison à la liste 
                     lc.Add(l);
 
 

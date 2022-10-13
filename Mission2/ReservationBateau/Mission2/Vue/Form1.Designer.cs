@@ -32,25 +32,23 @@ namespace Connecte
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ListBoxSecteur = new System.Windows.Forms.ListBox();
             this.ListBoxLiaison = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tbSecteur = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.btnAjout = new System.Windows.Forms.Button();
+            this.btnModif = new System.Windows.Forms.Button();
+            this.btnSupp = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.duree = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ListBoxSecteur
             // 
             this.ListBoxSecteur.BackColor = System.Drawing.Color.SandyBrown;
             this.ListBoxSecteur.FormattingEnabled = true;
-            this.ListBoxSecteur.Location = new System.Drawing.Point(16, 25);
-            this.ListBoxSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListBoxSecteur.ItemHeight = 16;
+            this.ListBoxSecteur.Location = new System.Drawing.Point(21, 31);
+            this.ListBoxSecteur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ListBoxSecteur.Name = "ListBoxSecteur";
-            this.ListBoxSecteur.Size = new System.Drawing.Size(270, 186);
+            this.ListBoxSecteur.Size = new System.Drawing.Size(359, 228);
             this.ListBoxSecteur.TabIndex = 0;
             this.ListBoxSecteur.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxSecteur_MouseClick);
             // 
@@ -58,109 +56,102 @@ namespace Connecte
             // 
             this.ListBoxLiaison.BackColor = System.Drawing.Color.SandyBrown;
             this.ListBoxLiaison.FormattingEnabled = true;
-            this.ListBoxLiaison.Location = new System.Drawing.Point(338, 25);
-            this.ListBoxLiaison.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ListBoxLiaison.ItemHeight = 16;
+            this.ListBoxLiaison.Location = new System.Drawing.Point(451, 31);
+            this.ListBoxLiaison.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ListBoxLiaison.Name = "ListBoxLiaison";
-            this.ListBoxLiaison.Size = new System.Drawing.Size(270, 186);
+            this.ListBoxLiaison.Size = new System.Drawing.Size(418, 228);
             this.ListBoxLiaison.TabIndex = 1;
             // 
-            // button1
+            // btnAjout
             // 
-            this.button1.Location = new System.Drawing.Point(328, 379);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Ajouter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAjout.BackgroundImage = global::Mission2.Properties.Resources.viper;
+            this.btnAjout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjout.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAjout.Location = new System.Drawing.Point(21, 429);
+            this.btnAjout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAjout.Name = "btnAjout";
+            this.btnAjout.Size = new System.Drawing.Size(127, 52);
+            this.btnAjout.TabIndex = 2;
+            this.btnAjout.Text = "Ajouter";
+            this.btnAjout.UseVisualStyleBackColor = true;
+            this.btnAjout.Click += new System.EventHandler(this.btnAjout_Click);
             // 
-            // button2
+            // btnModif
             // 
-            this.button2.Location = new System.Drawing.Point(79, 379);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 25);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Modifier";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnModif.BackgroundImage = global::Mission2.Properties.Resources.viper;
+            this.btnModif.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModif.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnModif.Location = new System.Drawing.Point(236, 429);
+            this.btnModif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnModif.Name = "btnModif";
+            this.btnModif.Size = new System.Drawing.Size(127, 52);
+            this.btnModif.TabIndex = 3;
+            this.btnModif.Text = "Modifier";
+            this.btnModif.UseVisualStyleBackColor = true;
+            this.btnModif.Click += new System.EventHandler(this.btnModif_Click);
             // 
-            // button3
+            // btnSupp
             // 
-            this.button3.Location = new System.Drawing.Point(554, 379);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(64, 25);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Supprimer";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSupp.BackgroundImage = global::Mission2.Properties.Resources.viper;
+            this.btnSupp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSupp.Location = new System.Drawing.Point(451, 429);
+            this.btnSupp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSupp.Name = "btnSupp";
+            this.btnSupp.Size = new System.Drawing.Size(127, 52);
+            this.btnSupp.TabIndex = 4;
+            this.btnSupp.Text = "Supprimer";
+            this.btnSupp.UseVisualStyleBackColor = true;
+            this.btnSupp.Click += new System.EventHandler(this.btnSupp_Click);
             // 
-            // tbSecteur
+            // label1
             // 
-            this.tbSecteur.Location = new System.Drawing.Point(56, 339);
-            this.tbSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tbSecteur.Name = "tbSecteur";
-            this.tbSecteur.Size = new System.Drawing.Size(122, 20);
-            this.tbSecteur.TabIndex = 5;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Image = global::Mission2.Properties.Resources.viper;
+            this.label1.Location = new System.Drawing.Point(13, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 46);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Vous souhaitez :";
             // 
-            // maskedTextBox1
+            // duree
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(305, 339);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(122, 20);
-            this.maskedTextBox1.TabIndex = 6;
+            this.duree.Location = new System.Drawing.Point(249, 486);
+            this.duree.Name = "duree";
+            this.duree.Size = new System.Drawing.Size(100, 22);
+            this.duree.TabIndex = 6;
             // 
-            // maskedTextBox2
+            // label2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(305, 308);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(122, 20);
-            this.maskedTextBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(56, 308);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(56, 275);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(122, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(305, 275);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(122, 20);
-            this.maskedTextBox3.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(193, 489);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Date : ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1155, 502);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.tbSecteur);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1540, 618);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.duree);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSupp);
+            this.Controls.Add(this.btnModif);
+            this.Controls.Add(this.btnAjout);
             this.Controls.Add(this.ListBoxLiaison);
             this.Controls.Add(this.ListBoxSecteur);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Interface admin";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -173,15 +164,12 @@ namespace Connecte
 
         private System.Windows.Forms.ListBox ListBoxSecteur;
         private System.Windows.Forms.ListBox ListBoxLiaison;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox tbSecteur;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Button btnAjout;
+        private System.Windows.Forms.Button btnModif;
+        private System.Windows.Forms.Button btnSupp;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox duree;
+        private System.Windows.Forms.Label label2;
     }
 }
 

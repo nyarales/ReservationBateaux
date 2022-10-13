@@ -29,7 +29,7 @@ namespace Connecte.Controleur
 
 
 
-        // Récupération de la liste des employés à partir de la DAL
+        // Récupération de la liste des liaisons à partir de la DAL
         public List<Liaison> chargementLiaiBD(string id, string name)
         {
 
@@ -49,10 +49,10 @@ namespace Connecte.Controleur
 
 
         // Mise à jour d'un employé  dans la DAL
-        public void updateLiai(Liaison e)
+        public void updateLiaison(Liaison l, string id, string name)
         {
 
-            LiaisonDAO.updateLiaison(e);
+            LiaisonDAO.updateLiaison(l,id,name);
 
         }
 
@@ -60,5 +60,15 @@ namespace Connecte.Controleur
         {
             throw new NotImplementedException();
         }
+
+        public void deleteLiaison(Liaison l, string id, string name)
+        {
+
+            LiaisonDAO.deleteLiaison(l, id, name);
+
+        }
     }
-}
+    
+
+    }
+

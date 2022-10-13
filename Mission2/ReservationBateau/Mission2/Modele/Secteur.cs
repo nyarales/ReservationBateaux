@@ -10,8 +10,7 @@ namespace Connecte.Modele
     {
         private string id;
         private string libelle;
-        private Liaison l1;
-
+       
 
         // Les nouveaux get et set version C# et VS.Net. Remplacent getLogin() et setLogin(string unLogin)
         public string Libelle { get => libelle; set => libelle = value; }

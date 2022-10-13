@@ -38,3 +38,4 @@ C:\Users\ibrah\source\repos\ReservationBateau\Mission2\bin\Debug\System.Runtime.
 C:\Users\ibrah\source\repos\ReservationBateau\Mission2\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\ibrah\source\repos\ReservationBateau\Mission2\obj\Debug\Mission2.csproj.CopyComplete
 C:\Users\ibrah\source\repos\ReservationBateau\Mission2\obj\Debug\Connecte.Form1.resources
+C:\Users\ibrah\source\repos\ReservationBateau\Mission2\obj\Debug\Connecte.Form2.resources

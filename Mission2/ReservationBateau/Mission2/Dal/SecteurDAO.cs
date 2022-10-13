@@ -101,7 +101,7 @@ namespace Connecte.DAL
                     //Instanciation d'un Emplye
                     s = new Secteur(numero, nom);
 
-                    // Ajout de cet employe à la liste 
+                    // Ajout de ce secteur à la liste 
                     lc.Add(s);
 
 
