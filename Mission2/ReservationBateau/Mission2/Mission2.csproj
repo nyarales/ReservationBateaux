@@ -101,6 +101,7 @@
     <Compile Include="Controler\Mgr.cs" />
     <Compile Include="Dal\Connexion.cs" />
     <Compile Include="Dal\LiaisonDAO.cs" />
+    <Compile Include="Dal\SecteurDAO.cs" />
     <Compile Include="Modele\Liaison.cs" />
     <Compile Include="Modele\Port.cs" />
     <Compile Include="Modele\Secteur.cs" />

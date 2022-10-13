@@ -8,26 +8,26 @@ namespace Connecte.Modele
 {
     public class Liaison
     {
-        private int id;
-        private int idRegrouper;
-        private int idDepart;
-        private int idArrivee;
+        private string id;
+        private string idRegrouper;
+        private string idDepart;
+        private string idArrivee;
         private string duree;
     
 
     public string Duree { get => duree; set => duree = value; }
 
     // remplace getId()
-    public int Id { get => id; }
+    public string Id { get => id; }
 
-    public int IdRegrouper { get => id; }
+    public string IdRegrouper { get => id; }
 
-    public int IdDepart { get => id; }
-    public int IdArrivee { get => id; }
+    public string IdDepart { get => id; }
+    public string IdArrivee { get => id; }
 
 
 
-        public Liaison(int unId, int unIdRegrouper ,int unIdDepart ,int unIdArrive, string uneDuree)
+        public Liaison(string unId, string unIdRegrouper , string unIdDepart , string unIdArrive, string uneDuree)
     {
             this.id = unId;
             this.idRegrouper = unIdRegrouper;

@@ -47,98 +47,108 @@ namespace Connecte
             // 
             this.ListBoxSecteur.BackColor = System.Drawing.Color.SandyBrown;
             this.ListBoxSecteur.FormattingEnabled = true;
-            this.ListBoxSecteur.ItemHeight = 16;
-            this.ListBoxSecteur.Location = new System.Drawing.Point(21, 31);
+            this.ListBoxSecteur.Location = new System.Drawing.Point(16, 25);
+            this.ListBoxSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListBoxSecteur.Name = "ListBoxSecteur";
-            this.ListBoxSecteur.Size = new System.Drawing.Size(358, 228);
+            this.ListBoxSecteur.Size = new System.Drawing.Size(270, 186);
             this.ListBoxSecteur.TabIndex = 0;
+            this.ListBoxSecteur.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListBoxSecteur_MouseClick);
             // 
             // ListBoxLiaison
             // 
             this.ListBoxLiaison.BackColor = System.Drawing.Color.SandyBrown;
             this.ListBoxLiaison.FormattingEnabled = true;
-            this.ListBoxLiaison.ItemHeight = 16;
-            this.ListBoxLiaison.Location = new System.Drawing.Point(451, 31);
+            this.ListBoxLiaison.Location = new System.Drawing.Point(338, 25);
+            this.ListBoxLiaison.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListBoxLiaison.Name = "ListBoxLiaison";
-            this.ListBoxLiaison.Size = new System.Drawing.Size(358, 228);
+            this.ListBoxLiaison.Size = new System.Drawing.Size(270, 186);
             this.ListBoxLiaison.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(437, 466);
+            this.button1.Location = new System.Drawing.Point(328, 379);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
+            this.button1.Size = new System.Drawing.Size(68, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(105, 466);
+            this.button2.Location = new System.Drawing.Point(79, 379);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 31);
+            this.button2.Size = new System.Drawing.Size(70, 25);
             this.button2.TabIndex = 3;
             this.button2.Text = "Modifier";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(739, 466);
+            this.button3.Location = new System.Drawing.Point(554, 379);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 31);
+            this.button3.Size = new System.Drawing.Size(64, 25);
             this.button3.TabIndex = 4;
             this.button3.Text = "Supprimer";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // tbSecteur
             // 
-            this.tbSecteur.Location = new System.Drawing.Point(75, 417);
+            this.tbSecteur.Location = new System.Drawing.Point(56, 339);
+            this.tbSecteur.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbSecteur.Name = "tbSecteur";
-            this.tbSecteur.Size = new System.Drawing.Size(161, 22);
+            this.tbSecteur.Size = new System.Drawing.Size(122, 20);
             this.tbSecteur.TabIndex = 5;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(407, 417);
+            this.maskedTextBox1.Location = new System.Drawing.Point(305, 339);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(161, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(122, 20);
             this.maskedTextBox1.TabIndex = 6;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(407, 379);
+            this.maskedTextBox2.Location = new System.Drawing.Point(305, 308);
+            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(161, 22);
+            this.maskedTextBox2.Size = new System.Drawing.Size(122, 20);
             this.maskedTextBox2.TabIndex = 7;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 379);
+            this.textBox1.Location = new System.Drawing.Point(56, 308);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
+            this.textBox1.Size = new System.Drawing.Size(122, 20);
             this.textBox1.TabIndex = 8;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 338);
+            this.textBox2.Location = new System.Drawing.Point(56, 275);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
+            this.textBox2.Size = new System.Drawing.Size(122, 20);
             this.textBox2.TabIndex = 9;
             // 
             // maskedTextBox3
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(407, 338);
+            this.maskedTextBox3.Location = new System.Drawing.Point(305, 275);
+            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(161, 22);
+            this.maskedTextBox3.Size = new System.Drawing.Size(122, 20);
             this.maskedTextBox3.TabIndex = 10;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1611, 618);
+            this.ClientSize = new System.Drawing.Size(1155, 502);
             this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -150,6 +160,7 @@ namespace Connecte
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ListBoxLiaison);
             this.Controls.Add(this.ListBoxSecteur);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Interface admin";
             this.Load += new System.EventHandler(this.Form1_Load);

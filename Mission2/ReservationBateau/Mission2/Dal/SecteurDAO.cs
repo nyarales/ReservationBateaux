@@ -8,7 +8,7 @@ using Connecte.Modele;
 
 namespace Connecte.DAL
 {
-    public class LiaisonDAO
+    public class SecteurDAO
     {
 
         // attributs de connexion statiques
@@ -30,7 +30,7 @@ namespace Connecte.DAL
 
         // Mise à jour d'une liaison
 
-        public static void updateLiaison(Liaison l)
+        public static void updateSecteur(Secteur s)
         {
 
             try
@@ -43,7 +43,7 @@ namespace Connecte.DAL
                 maConnexionSql.openConnection();
 
 
-                Ocom = maConnexionSql.reqExec("update liaison set IdRegrouper = '" + l.IdRegrouper + " IdDepart = '"+l.IdDepart+ " IdArrivee = '" + l.IdArrivee+ " Duree = '" + l.Duree+  "'where id = " + l.Id);
+                //Ocom = maConnexionSql.reqExec("update secteur set IdRegrouper = '" + l.IdRegrouper + " IdDepart = '" + l.II "e + "'where id = " + l.Id);
 
 
                 int i = Ocom.ExecuteNonQuery();
@@ -66,10 +66,10 @@ namespace Connecte.DAL
         }
 
         // Récupération de la liste des employés
-        public static List<Liaison> GetLiaison(string id, string name)
+        public static List<Secteur> GetSecteur()
         {
 
-            List<Liaison> lc = new List<Liaison>();
+            List<Secteur> lc = new List<Secteur>();
 
             try
             {
@@ -80,12 +80,12 @@ namespace Connecte.DAL
                 maConnexionSql.openConnection();
 
 
-                Ocom = maConnexionSql.reqExec("Select  LIBELLE , NOM , duree , ID_ARRIVEE from  secteur S  ,port P  , liaison L where   P.ID=L.ID_ARRIVEE and S.LIBELLE='" + name + "' and L.ID_REGROUPER=" + id);
+                Ocom = maConnexionSql.reqExec("Select * from Secteur");
 
 
                 MySqlDataReader reader = Ocom.ExecuteReader();
 
-                Liaison l;
+                Secteur s;
 
 
 
@@ -94,18 +94,15 @@ namespace Connecte.DAL
                 {
 
                     string numero = (string)reader.GetValue(0);
-                    string  nom = (string)reader.GetValue(1);
-                    string depart = (string)reader.GetValue(2);
-                    string arrivee = (string)reader.GetValue(3);
-                    string duree = (string)reader.GetValue(4);
-
+                    string nom = (string)reader.GetValue(1);
+                   
 
 
                     //Instanciation d'un Emplye
-                    l = new Liaison(numero, nom, depart,arrivee,duree);
+                    s = new Secteur(numero, nom);
 
                     // Ajout de cet employe à la liste 
-                    lc.Add(l);
+                    lc.Add(s);
 
 
                 }

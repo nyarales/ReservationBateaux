@@ -12,25 +12,39 @@ namespace Connecte.Controleur
     public class Mgr
     {
 
-        LiaisonDAO secDAO = new LiaisonDAO();
+        LiaisonDAO liaiDAO = new LiaisonDAO();
+        SecteurDAO sectDAO = new SecteurDAO();
+
 
         List<Liaison> MaListeLiaison;
+
+        List<Secteur> MaListeSecteur;
 
         public Mgr()
         {
 
             MaListeLiaison = new List<Liaison>();
+            MaListeSecteur = new List<Secteur>();
         }
 
 
 
         // Récupération de la liste des employés à partir de la DAL
-        public List<Liaison> chargementLiaiBD()
+        public List<Liaison> chargementLiaiBD(string id, string name)
         {
 
-            MaListeLiaison = LiaisonDAO.GetLiaison();
+            MaListeLiaison = LiaisonDAO.GetLiaison(id, name);
 
             return (MaListeLiaison);
+        }
+
+
+        public List<Secteur> chargementSectBD()
+        {
+
+            MaListeSecteur = SecteurDAO.GetSecteur();
+
+            return (MaListeSecteur);
         }
 
 
@@ -42,5 +56,9 @@ namespace Connecte.Controleur
 
         }
 
+        internal void updateLiai(List<Liaison> lLiai)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

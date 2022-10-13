@@ -13,6 +13,8 @@ namespace Connecte
         Mgr monManager;
 
         List<Liaison> lLiai = new List<Liaison>();
+        List<Secteur> lSect = new List<Secteur>();
+
 
 
 
@@ -28,7 +30,11 @@ namespace Connecte
         {
 
 
+            
+            lSect = monManager.chargementSectBD();
             lLiai = monManager.chargementLiaiBD();
+
+
 
 
             affiche();
@@ -44,8 +50,11 @@ namespace Connecte
 
 
                 ListBoxSecteur.DataSource = null;
-                ListBoxSecteur.DataSource = lLiai;
+                ListBoxSecteur.DataSource = lSect;
                 ListBoxSecteur.DisplayMember = "Libelle";
+
+
+               
 
 
             }
@@ -56,6 +65,14 @@ namespace Connecte
 
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void ListBoxSecteur_MouseClick(object sender, MouseEventArgs e)
+        {
+            ListBoxLiaison.DataSource = null;
+            ListBoxLiaison.DataSource = lLiai;
+            ListBoxLiaison.DisplayMember = "Description";
 
         }
 
@@ -120,8 +137,7 @@ namespace Connecte
             affiche();
         }
 
-
-
+        
     }
 
 
